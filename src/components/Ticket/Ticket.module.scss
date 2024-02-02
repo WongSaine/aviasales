@@ -1,0 +1,60 @@
+@import '../../styles/includes';
+
+.ticket {
+  background-color: $white;
+  border-radius: $border-radius;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 8px 0 $shadow-color;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  &__compony-logo {
+    height: 36px;
+    width: 110px;
+  }
+
+  &__price {
+    color: $blue;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  &__trip {
+  }
+}
+
+.trip {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3);
+
+    @include responsive-to($res-xs) {
+      width: fit-content;
+    }
+  }
+
+  &__header {
+    color: $gray-header;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.03125rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    color: $main-text;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+  }
+}

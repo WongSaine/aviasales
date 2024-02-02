@@ -1,0 +1,37 @@
+@import '../../styles/includes';
+
+input[type='checkbox'] {
+  display: none;
+
+  &:checked + .checkbox-input {
+    &::before {
+      border: 1px solid $blue;
+      background: url('/check.svg') no-repeat center;
+    }
+  }
+}
+
+.checkbox-input {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  padding: 10px 0 10px 50px;
+  position: relative;
+
+  &:hover {
+    cursor: url('/cursor.svg') 14 14, pointer;
+    background-color: $hover-color;
+  }
+
+  &::before {
+    content: '';
+    display: flex;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    border: 1px solid $second-color;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../styles/includes';
+
+.ticket-types {
+  display: flex;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  overflow: hidden;
+
+  @include responsive-to($res-xs) {
+    flex-direction: column;
+  }
+
+  &__radio {
+    display: none;
+
+    &:checked + .ticket-types__label {
+      background-color: $blue;
+      color: $white;
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+
+  &__label {
+    width: calc(100% / 3);
+    background: $white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+
+    @include responsive-to($res-xs) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $hover-color;
+      cursor: url('/cursor.svg') 14 14, pointer;
+    }
+
+    &.bordered {
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+      @include responsive-to($res-xs) {
+        border: none;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+}
