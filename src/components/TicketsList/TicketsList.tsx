@@ -33,13 +33,13 @@ const TicketsList = () => {
 
   return (
     <>
-      <section className={classes.ticketList}>
+      <ul className={classes.ticketList}>
         {ticketsPack.length ? (
-          ticketsPack.map((ticket, idx) => <Ticket key={idx} ticket={ticket} />)
+          ticketsPack.map((ticket) => <Ticket key={window.crypto.randomUUID()} ticket={ticket} />)
         ) : (
-          <p>Рейсов, подходящих под заданные фильтры, не найдено</p>
+          <li>Рейсов, подходящих под заданные фильтры, не найдено</li>
         )}
-      </section>
+      </ul>
     </>
   )
 }

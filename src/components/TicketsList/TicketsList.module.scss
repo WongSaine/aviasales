@@ -1,5 +1,9 @@
 @import '../../styles/includes';
 
+li::marker {
+  content: '';
+}
+
 .ticket-list {
   display: flex;
   flex-direction: column;

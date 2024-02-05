@@ -11,7 +11,7 @@ interface Props {
 
 const Ticket = ({ ticket }: Props) => {
   return (
-    <article className={classes.ticket}>
+    <li className={classes.ticket}>
       <header className={classes.ticket__header}>
         <span className={classes.ticket__price}>{numberWithSpaces(ticket.price)} Р</span>
         <img
@@ -58,7 +58,7 @@ const Ticket = ({ ticket }: Props) => {
           </div>
         )
       })}
-    </article>
+    </li>
   )
 }
 
